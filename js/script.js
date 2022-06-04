@@ -1,11 +1,11 @@
 "use strict"
-
+import { listenerAbout } from "./about.js";
 const menuBarsBtn = document.getElementById("menu-bars");
 const navbar = document.querySelector(".navbar");
 
 const listener = (
   () => {
-
+    console.log("hola")
     menuBarsBtn.addEventListener("click", e => {
       if(e.target.classList.contains("fa-bars")){
         e.target.classList.remove("fa-bars");
@@ -17,5 +17,9 @@ const listener = (
         navbar.classList.remove("active");
       }
     })
+
+
+
+    listenerAbout();
   }
 )()
