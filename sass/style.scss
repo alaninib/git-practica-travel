@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,500;1,600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  border: none; outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+$blue: #29d9d5;
+$black: #111;
+$white: #fff;
+$light-color: #aaa;
+$bg-color: #222;
+$black-bg: rgb(17,17,17,.7);
+$border: .2rem solid $blue;
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  
+  &::-webkit-scrollbar{
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track{
+    background: $black;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background: $black;
+  }
+}
+
+body{
+  background: $black;
+  overflow-x: hidden;
+}
+
+section{
+  padding: 3rem 9%;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: $blue;
+  border: $border;
+  border-radius: 5rem;
+  cursor: pointer;
+  background: none;
+
+  &:hover{
+    background: $blue;
+    color: $black-bg;
+  }
+}
+
+/*---------------Header-------------*/
+
+.header{
+  position: fixed;
+  top:0; left:0; right: 0;
+  z-index: 1000;
+  background: $bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+
+  .navbar a{
+    font-size: 1.7rem;
+    color: $light-color;
+    display: inline-block;
+    margin: 0 1rem;
+
+    &:hover{
+      color: $blue;
+    }
+  }
+
+  .btn{
+    margin-top: 0;
+  }
+}
+
+.logo{
+  font-size: 2.5rem;
+  color: $white;
+  font-weight: bolder;
+
+  i{
+    color: $blue;
+    padding-right: .5rem;
+  }
+}
+
+#menu-bars{
+  font-size: 2.5rem;
+  color: $white;
+  cursor: pointer;
+  display: none;
+}
+
+/*---------------Header-------------*/
+
+/*------------Home------------*/
+
+.home{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 9rem;
+  width: 90%;
+  min-height: 80vh;
+  border-radius: 1rem;
+  background: linear-gradient($black-bg, $black-bg), url(../images/home-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+
+  .content{
+    text-align: center;
+
+    span{
+      display: block;
+      font-size: 4vw;
+      font-weight: bolder;
+      color: transparent;
+      -webkit-text-stroke: .1rem $white;
+    }
+
+    h3{
+      color: $white;
+      font-size: 6vw;
+    }
+
+    p{
+      max-width: 60rem;
+      margin: 1rem auto;
+      font-size: 1.5rem;
+      color: $light-color;
+    }
+  }
+}
+
+/*------------End Home------------*/
+
+/*------------Booking-------------*/
+
+.booking-form{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -5rem;
+  background: $bg-color;
+  border-radius: 1rem;
+  box-shadow: 0 .5rem 1rem rgba(17,17,17,.7);
+  padding: 3rem 2rem;
+
+  form{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .inputBox{
+      flex: 1 1 25rem;
+
+      span{
+        font-size: 1.4rem;
+        color: $light-color;
+      }
+
+      input{
+        width: 100%;
+        margin-top: 1rem;
+        padding: 1.2rem 1.4rem;
+        border-radius: 5rem;
+        border: $border;
+        font-size: 1.6rem;
+        color: $light-color;
+        text-transform: none;
+        background: none;
+        margin-top: 1rem;
+      }
+    }
+
+    .btn{
+      flex: 1 1 15rem;
+    }
+  }
+}
+/*------------End Booking-------------*/
+
+/*------------About---------------*/
+
+.about{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .video-container{
+    flex: 1 1 42rem;
+
+    video{
+      border-radius: 1rem;
+      width: 1
+    }
+  }
+
+  .content{
+    flex: 1 1 42rem;
+  }
+}
+/*------------End About---------------*/
+
+@media screen and (max-width: 991px){
+  html{
+    font-size: 55%;
+  }
+
+  section{
+    padding: 3rem 9%;
+  }
+
+  .header{
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #menu-bars{
+    display: inline-block;
+  }
+
+  .header{
+    
+    .navbar{
+      position: absolute;
+      top:99%; left: 0; right:0;
+      background: $bg-color;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+      &.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      a{
+        margin: 2rem;
+        font-size: 2rem;
+        display: block;
+
+        &:hover{
+          letter-spacing: .3rem;
+        }
+      }
+    }
+  }
+
+  .home{
+    margin-top: 10rem;
+
+    .content{
+
+      span{
+        font-size: 8vw;
+      }
+
+      h3{
+        font-size: 8vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+}
