@@ -9,7 +9,6 @@ const displayVideo = (srcVideo) => {
 
 
 export const listenerAbout = () => {
-    console.log("hola")
     controlsBtn.forEach(btn => {
       btn.addEventListener("click", (e) => {
         const dataSrc = e.target.dataset.src;
