@@ -5,7 +5,6 @@ const navbar = document.querySelector(".navbar");
 
 const listener = (
   () => {
-    console.log("hola")
     menuBarsBtn.addEventListener("click", e => {
       if(e.target.classList.contains("fa-bars")){
         e.target.classList.remove("fa-bars");
