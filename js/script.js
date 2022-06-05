@@ -18,6 +18,10 @@ const listener = (
     })
 
 
+    AOS.init({
+      duration: 400,
+      offset: 150,
+    })
 
     listenerAbout();
   }
