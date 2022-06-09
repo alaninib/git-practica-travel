@@ -84,6 +84,9 @@ section {
   display: inline-block;
   margin: 0 1rem;
 }
+.header .navbar a.active {
+  color: #29d9d5;
+}
 .header .navbar a:hover {
   color: #29d9d5;
 }
@@ -397,6 +400,7 @@ section {
 .blog .box-container .box .content .icon a {
   font-size: 1.4rem;
   color: #aaa;
+  text-transform: none;
 }
 .blog .box-container .box .content .icon a:hover {
   color: #29d9d5;

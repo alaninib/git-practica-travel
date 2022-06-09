@@ -103,6 +103,10 @@ section{
     display: inline-block;
     margin: 0 1rem;
 
+    &.active{
+      color: $blue;
+    }
+
     &:hover{
       color: $blue;
     }
@@ -467,6 +471,7 @@ section{
         a{
           font-size: 1.4rem;
           color: $light-color;
+          text-transform: none;
 
           &:hover{
             color: $blue;
